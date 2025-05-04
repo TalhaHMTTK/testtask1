@@ -4,4 +4,16 @@
   <%= render "title", post: @post %>
 <% end %>
 
+<h2>Comments</h2>
+
+<%= turbo_frame_tag "new_comment" do %>
+  <%= render "comments/form", comment: Comment.new, post: @post %>
+<% end %>
+
+<%= turbo_stream_from [@post, :comments] %>
+
+<div id="comments_<%= @post.id %>">
+  <%= render @post.comments %>
+</div>
+
 <p><%= link_to "Back", posts_path %></p>

@@ -1,0 +1,6 @@
+<%= form_with(model: [post, comment], data: { turbo_frame: "new_comment" }) do |f| %>
+  <div class="mb-2">
+    <%= f.text_field :content, placeholder: "Add a comment", class: "form-control" %>
+  </div>
+  <%= f.submit "Comment" %>
+<% end %>

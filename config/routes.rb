@@ -13,5 +13,6 @@ Rails.application.routes.draw do
       get :edit_title
       patch :update_title
     end
+    resources :comments
   end
 end
