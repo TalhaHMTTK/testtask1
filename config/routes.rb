@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     end
     resources :comments
   end
+
+  get "/counter", to: "home#counter"
 end
