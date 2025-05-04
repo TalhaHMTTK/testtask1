@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "modal" do %>
+    <%= render layout: "modal" do %>
+        <%= render "form", post: @post %>
+    <% end %>
+<% end %>

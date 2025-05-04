@@ -1,0 +1,3 @@
+<%= turbo_frame_tag dom_id(post, :title) do %>
+  <%= link_to post.title, edit_title_post_path(post), data: { turbo_frame: dom_id(post, :title) } %>
+<% end %>

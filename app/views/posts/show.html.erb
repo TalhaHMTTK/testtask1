@@ -1,0 +1,7 @@
+<h1>Post Details</h1>
+
+<%= turbo_frame_tag dom_id(@post, :title) do %>
+  <%= render "title", post: @post %>
+<% end %>
+
+<p><%= link_to "Back", posts_path %></p>

@@ -1,0 +1,7 @@
+
+<%= turbo_frame_tag dom_id(post, :title) do %>
+  <%= form_with model: post, url: update_title_post_path(post), method: :patch, data: { turbo_frame: dom_id(post, :title) } do |f| %>
+    <%= f.text_field :title, autofocus: true %>
+    <%= f.submit "Save"%>
+  <% end %>
+<% end %>
