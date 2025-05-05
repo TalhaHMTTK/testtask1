@@ -7,3 +7,16 @@
     Decrement
   </button>
 </div>
+
+
+<div data-controller="dropdown">
+  <button type="button" data-action="click->dropdown#toggle" class="btn btn-primary">
+    Toggle Dropdown
+  </button>
+
+  <div data-dropdown-target="menu" class="border p-2">
+    <a href="#">Item 1</a><br>
+    <a href="#">Item 2</a><br>
+    <a href="#">Item 3</a>
+  </div>
+</div>
